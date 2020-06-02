@@ -3,12 +3,12 @@ class School#============================================
    attr_reader \
     :roster,
     :name
-
+    #-----------------------------
     def initialize(name)
         @name = name
         @roster = {}
     end
-
+    #-----------------------------
 
     def roster
         @roster || {}
@@ -25,6 +25,7 @@ class School#============================================
         @roster[number]
     end
     
+    #sorts inner arrays in place
     def sort
         @roster.each{|(key,val)|
             @roster[key].sort!                      
