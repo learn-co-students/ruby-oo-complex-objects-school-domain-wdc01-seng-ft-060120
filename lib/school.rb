@@ -1,4 +1,4 @@
-
+require 'pry'
 class School#============================================
    attr_reader \
     :roster,
@@ -23,5 +23,11 @@ class School#============================================
 
     def grade(number)
         @roster[number]
+    end
+    
+    def sort
+        @roster.each{|(key,val)|
+            @roster[key].sort!                      
+    }
     end
 end#========#============================================
